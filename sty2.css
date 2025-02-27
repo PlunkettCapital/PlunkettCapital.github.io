@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 公司列表部分样式 */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.company .text {
+    width: 60%; /* 文本占据 60% 宽度 */
+    padding: 20px;
+    line-height: 1.8; /* 增加行距 */
+}
+
+.company .text h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.company .text p {
+    font-size: 1em;
+    color: #666;
+}
+
+.company .image {
+    width: 40%; /* Logo 占据 40% 宽度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo 容器样式 */
+.logo-container {
+    width: 200px; /* 增大 Logo 容器宽度 */
+    height: 200px; /* 增大 Logo 容器高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* 背景透明 */
+    border-radius: 10px; /* 圆角 */
+    overflow: hidden; /* 防止 Logo 超出容器 */
+    border: 2px solid rgba(255, 254, 254, 0.1); /* 添加边框 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+/* Logo 图片样式 */
+.logo-container img {
+    max-width: 100%; /* Logo 宽度不超过容器 */
+    max-height: 100%; /* Logo 高度不超过容器 */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* 保持 Logo 比例 */
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+/* Logo 悬停效果 */
+.logo-container:hover {
+    transform: scale(1.05); /* 悬停时放大 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 悬停时添加阴影 */
+}
+
+.logo-container:hover img {
+    transform: scale(1.1); /* 悬停时放大 Logo */
+}
+
+/* 交替布局 */
+.company:nth-child(odd) .text {
+    order: 1; /* 奇数公司：文本在左 */
+}
+
+.company:nth-child(odd) .image {
+    order: 2; /* 奇数公司：Logo 在右 */
+}
+
+.company:nth-child(even) .text {
+    order: 2; /* 偶数公司：文本在右 */
+}
+
+.company:nth-child(even) .image {
+    order: 1; /* 偶数公司：Logo 在左 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .company {
+        flex-direction: column; /* 小屏幕：垂直排列 */
+    }
+
+    .company .text,
+    .company .image {
+        width: 100%; /* 小屏幕：占据整个宽度 */
+    }
+
+    .company .text {
+        padding: 10px;
+    }
+
+    .company .image {
+        margin-top: 20px;
+    }
+
+    .logo-container {
+        width: 150px; /* 小屏幕：调整 Logo 容器大小 */
+        height: 150px;
+    }
+}
+
+
+/* 公司形象部分样式 */
+.company-image1 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 根据需要调整高度 */
+    background: url('img/1.png') no-repeat center center / cover;
+    background-attachment:fixed; /* 固定背景图片 */
+    color: white;
+    overflow: hidden;
+}
+
+.logo-container1 {
+    position: absolute;
+    top: 52%; /* 根据需要调整位置 */
+    left: 60%; /* 根据需要调整位置 */
+    z-index: 10; /* 确保Logo在最上层 */
+}
+.company-logo1 {
+    max-width: 700px; /* 设置最大宽度 */
+    max-height: 700px; /* 设置最大高度 */
+    width: 100%; /* 确保Logo按比例缩放 */
+    height: auto; /* 确保Logo按比例缩放 */
+    border-radius: 10px;
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 2s ease-in-out; /* 添加过渡效果 */
+    display: block;
+}
+
+
+/* 文字容器 */
+.text-container1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+    z-index: 10; /* 确保Logo在最上层 */
+}
+
+/* 文字淡入效果 */
+.company-image1.show .text-container1,
+.company-image1.show .company-logo1 { /* 确保Logo也淡入 */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 标题和描述样式 */
+.company-title1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+.background-with-lightwave {
+    position: relative;
+    width: 100%; /* 根据需要调整 */
+    height: 100vh; /* 根据实际背景图片高度调整 */
+    background-size: cover;
+    overflow: hidden; /* 确保伪元素不超出容器 */
+}
+
+
+.background-with-lightwave::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%; /* 宽度应大于容器宽度，以确保覆盖整个区域 */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.8), rgba(255,255,255,0));
+    /* 上面的渐变色可以根据需要调整透明度和颜色 */
+    transform: skewX(-20deg); /* 可选：倾斜效果，使光线看起来更有动感 */
+    z-index: 1; /* 确保光波在背景图之上 */
+    animation: slideAndFade 4s ease-in-out forwards; /* 动画名称、时长、缓动函数、保持最后一帧 */
+}
+
+@keyframes slideAndFade {
+    0% {
+        left: -100%;
+        opacity: 1; /* 开始时完全可见 */
+    }
+    75% {
+        left: 100%;
+        opacity: 1; /* 当光波移动到最右边时仍然可见 */
+    }
+    100% {
+        left: 100%;
+        opacity: 0; /* 动画结束时透明度为0，光波消失 */
+    }
+}
+@media (max-width: 480px) {
+    .company-image1 {
+        height: 30vh;
+    }
+
+    .company-logo1 {
+        max-height: 80px;
+    }
+}
+
+
+/* Logo 容器样式 */
+.logo1-container {
+    text-align: center; /* 居中 */
+    margin: 20px 0;     /* 上下间距 */
+}
+
+/* Logo 图片样式 */
+.logo1-container img {
+    width: 100px;       /* 调整 Logo 宽度 */
+    height: auto;       /* 高度自适应 */
+}
+
+/* 横线样式 */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;   /* 横线颜色 */
+    margin: 20px 0;     /* 上下间距 */
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+.copyright a {
+    color: #666;
+    text-decoration: none;
+}
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+/* 空白间距 */
+.spacer1 {
+    height: 30px; /* 空白高度 */
+}
