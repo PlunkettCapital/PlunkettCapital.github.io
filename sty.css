@@ -124,13 +124,13 @@ p {
     top: 52%; /* 根据需要调整位置 */
     right: 5vw;
     z-index: 10; /* 确保Logo在最上层 */
-    width: 40vw; /* 动态调整容器宽度 */
+    width: 50vw; /* 动态调整容器宽度 */
     max-width: 700px; /* 最大宽度限制 */
     text-align: center; /* 确保Logo居中 */
 
 }
 .company-logo {
-    max-width: 100%; /* 设置最大宽度 */
+    max-width: 90%; /* 设置最大宽度 */
     max-height: 100%; /* 设置最大高度 */
     height: auto; /* 确保Logo按比例缩放 */
     border-radius: 10px;
@@ -405,7 +405,7 @@ p {
         /* 不取消背景固定 */
     }
     .company-logo {
-        max-height: 80px;
+        max-width: fit-content;
     }
     .logo-container {
         width: 90vw; /* 进一步增加宽度 */
