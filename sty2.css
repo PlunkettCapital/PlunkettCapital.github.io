@@ -289,6 +289,11 @@ p {
     }
 }
 @media (max-width: 768px) {
+    .company-image1 {
+        background-size: cover; /* 确保图片填满屏幕 */
+        background-position: center; /* 确保图片居中 */
+        min-height: 50vh; /* 根据需要调整高度 */
+    }
 
     .text-container1 {
         width: 90%; /* 在移动端适当增加宽度 */
@@ -302,7 +307,7 @@ p {
 }
 @media (max-width: 480px) {
     .company-image1 {
-        height: 30vh;
+        height: 40vh;
     }
 
     .company-logo1 {
