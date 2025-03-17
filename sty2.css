@@ -289,6 +289,11 @@ p {
     }
 }
 @media (max-width: 768px) {
+    .logo-container1 {
+        left: calc(100% - 80vw); /* 屏幕变小时，向左移动 */
+        width: 70vw; /* 屏幕变小时，缩小容器宽度 */
+        max-width:none;
+    }
 
     .text-container1 {
         width: 90%; /* 在移动端适当增加宽度 */
@@ -305,7 +310,12 @@ p {
         min-height: 50vh; /* 根据需要调整高度 */
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 480px) 
+    .logo-container1 {
+        left: calc(100% - 90vw); /* 屏幕变小时，向左移动 */
+        width: 80vw; /* 屏幕变小时，缩小容器宽度 */
+        max-width:none;
+    }
     .company-image1 {
         background-size: cover; /* 确保图片填满屏幕 */
         background-position: center; /* 确保图片居中 */
