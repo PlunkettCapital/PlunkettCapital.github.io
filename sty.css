@@ -357,6 +357,11 @@ p {
 }
 
 @media (max-width: 768px) {
+    .company-image {
+        background-size: cover; /* 确保图片填满屏幕 */
+        background-position: center; /* 确保图片居中 */
+        min-height: 50vh; /* 根据需要调整高度 */
+    }    
     .content-section {
         padding: 30px 10px;
     }
@@ -386,7 +391,7 @@ p {
 
 @media (max-width: 480px) {
     .company-image {
-        height: 30vh;
+        height: 40vh;
     }
 
     .company-logo {
