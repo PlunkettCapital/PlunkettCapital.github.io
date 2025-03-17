@@ -391,8 +391,10 @@ p {
 
 @media (max-width: 480px) {
     .company-image {
-        height: 40vh;
-    }
+        background-size: cover; /* 确保图片填满屏幕 */
+        background-position: center; /* 确保图片居中 */
+        min-height: 40vh; /* 根据需要调整高度 */
+    }    
 
     .company-logo {
         max-height: 80px;
@@ -411,8 +413,8 @@ p {
         font-size: 0.9em; /* 更进一步减小字体大小 */
     }
     .logo-container {
-        left: calc(100% - 75vw); /* 屏幕变小时，向左移动 */
-        width: 70vw; /* 屏幕变小时，缩小容器宽度 */
+        left: calc(100% - 95vw); /* 屏幕变小时，向左移动 */
+        width: 90vw; /* 屏幕变小时，缩小容器宽度 */
     }
 }
 
