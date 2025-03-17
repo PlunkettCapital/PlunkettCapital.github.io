@@ -387,6 +387,11 @@ p {
     .company-description {
         font-size: 1em; /* 在小屏幕上减小字体大小 */
     }
+    .logo-container {
+        left: calc(100% - 80vw); /* 屏幕变小时，向左移动 */
+        width: 70vw; /* 屏幕变小时，缩小容器宽度 */
+        max-width:none;
+    }
 }
 
 @media (max-width: 480px) {
@@ -412,6 +417,11 @@ p {
     .company-description {
         font-size: 0.9em; /* 更进一步减小字体大小 */
     }
+    .logo-container {
+        left: calc(100% - 90vw); /* 屏幕变小时，向左移动 */
+        width: 80vw; /* 屏幕变小时，缩小容器宽度 */
+        max-width:none;
+    }   
 }
 
 @media (max-width: 768px) {
