@@ -185,7 +185,7 @@ p {
     width: 100%;
     min-height: 100vh; /* 根据需要调整高度 */
     background: url('img/1.png') no-repeat center center / cover;
-    background-attachment:fixed; /* 固定背景图片 */
+    background-attachment:scroll;
     color: white;
     overflow: hidden;
 }
@@ -299,10 +299,17 @@ p {
         font-size: 1.5em; /* 在小屏幕上减小字体大小 */
         margin-bottom: 15px; /* 调整标题和描述之间的间距 */
     }
+    .company-image1 {
+        background-size: cover; /* 确保图片填满屏幕 */
+        background-position: center; /* 确保图片居中 */
+        min-height: 50vh; /* 根据需要调整高度 */
+    }
 }
 @media (max-width: 480px) {
     .company-image1 {
-        height: 30vh;
+        background-size: cover; /* 确保图片填满屏幕 */
+        background-position: center; /* 确保图片居中 */
+        min-height: 40vh; /* 根据需要调整高度 */
     }
 
     .company-logo1 {
