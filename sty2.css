@@ -1,0 +1,362 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 通用样式 */
+h2 {
+    font-family: 'Fredoka', cursive; /* 使用 Phudu 字体 */
+    font-weight: 600; /* 加粗 */
+    
+}
+
+p {
+    font-family: 'Poppins', serif; 
+    font-weight: 400; /* 正常 */
+}
+
+
+/* HOME 按钮容器 */
+.home-button-container {
+    position: fixed; /* 固定在页面顶部 */
+    top: 0;
+    right: 0;/* 左对齐 */
+    z-index: 1000; /* 确保按钮在其他内容之上 */
+    padding: 10px 20px; /* 上下内边距和左右内边距 */
+    opacity: 0; /* 初始状态为完全透明 */
+    transition: opacity 1s ease-in-out; /* 淡入效果 */
+}
+
+/* 当页面加载完成后的状态 */
+.home-button-container.show {
+    opacity: 1 !important; /* 页面加载完成后变为完全不透明 */
+}
+
+/* HOME 按钮样式 */
+.home-button {
+    display: inline-block;
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 去掉边框 */
+    background-color: transparent; /* 背景色设置为透明 */
+    color: rgba(50, 27, 165, 0.8); /* 字体颜色，带透明度 */
+    font-size: 16px; /* 字体大小 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 平滑的颜色过渡 */
+    z-index: 1000; /* 确保按钮在最上层 */
+    font-family: 'Poppins', serif; 
+    font-weight: 400; /* 正常 */
+}
+
+.home-button:hover {
+    color: #8a2be2;
+    background-color: rgba(255, 255, 255, 0.2); /* 悬停时背景更明显 */
+}
+
+/* 鼠标悬停时的样式 */
+.home-button:hover {
+    color: #8a2be2; /* 更深的紫色 */
+}
+
+/* 去掉焦点轮廓 */
+.home-button:focus {
+    outline: none;
+}
+
+/* 公司列表部分样式 */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.company .text {
+    width: 60%; /* 文本占据 60% 宽度 */
+    padding: 20px;
+    line-height: 1.8; /* 增加行距 */
+}
+
+.company .text h2 {
+    font-size: 2em;
+    font-weight: bold; /* 标题加粗 */
+    color: #6F3B95; /* 标题颜色 */
+    margin-bottom: 20px; /* 标题与段落之间的间距 */
+}
+
+
+.company .text p {
+    font-size: 17px; /* 正文字体大小 */
+    line-height: 2; /* 行高，增加可读性 */
+    color: #555; /* 正文颜色 */
+    text-align: left; /* 段落文字左对齐 */
+    margin-bottom: 0; /* 去掉段落底部默认的外边距 */
+}
+
+.company .image {
+    width: 40%; /* Logo 占据 40% 宽度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo 容器样式 */
+.logo-container {
+    width: 200px; /* 增大 Logo 容器宽度 */
+    height: 200px; /* 增大 Logo 容器高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* 背景透明 */
+    border-radius: 10px; /* 圆角 */
+    overflow: hidden; /* 防止 Logo 超出容器 */
+    border: 2px solid rgba(255, 254, 254, 0.1); /* 添加边框 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+/* Logo 图片样式 */
+.logo-container img {
+    max-width: 100%; /* Logo 宽度不超过容器 */
+    max-height: 100%; /* Logo 高度不超过容器 */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* 保持 Logo 比例 */
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+/* Logo 悬停效果 */
+.logo-container:hover {
+    transform: scale(1.05); /* 悬停时放大 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 悬停时添加阴影 */
+}
+
+.logo-container:hover img {
+    transform: scale(1.1); /* 悬停时放大 Logo */
+}
+
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .company {
+        flex-direction: column; /* 小屏幕：垂直排列 */
+    }
+
+    .company .text,
+    .company .image {
+        width: 100%; /* 小屏幕：占据整个宽度 */
+    }
+
+    .company .text {
+        padding: 10px;
+    }
+
+    .company .image {
+        margin-top: 20px;
+    }
+
+    .logo-container {
+        width: 150px; /* 小屏幕：调整 Logo 容器大小 */
+        height: 150px;
+    }
+}
+
+
+/* 公司形象部分样式 */
+.company-image1 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* 根据需要调整高度 */
+    background: url('img/1.png') no-repeat center center / cover;
+    background-attachment:fixed; /* 固定背景图片 */
+    color: white;
+    overflow: hidden;
+}
+
+.logo-container1 {
+    position: absolute;
+    top: 52%; /* 根据需要调整位置 */
+    left: calc(100% - 40vw); /* 动态调整水平位置 */
+    z-index: 10; /* 确保Logo在最上层 */
+    width: 40vw; /* 动态调整容器宽度 */
+    max-width: 700px; /* 最大宽度限制 */
+    text-align: center; /* 确保Logo居中 */
+}
+.company-logo1 {
+    max-width: 100%; /* 设置最大宽度 */
+    max-height: 100%; /* 设置最大高度 */
+    height: auto; /* 确保Logo按比例缩放 */
+    border-radius: 10px;
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 2s ease-in-out; /* 添加过渡效果 */
+    display: inline-block; /* 确保Logo居中 */
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3)); /* 为Logo添加阴影 */
+}
+
+
+/* 文字容器 */
+.text-container1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+    z-index: 10; /* 确保Logo在最上层 */
+
+}
+
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+/* 文字淡入效果 */
+.company-image1.show .text-container1,
+.company-image1.show .company-logo { /* 确保Logo也淡入 */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 标题和描述样式 */
+.company-title1 {
+    font-size: 2vw;
+    margin-bottom: 10px;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0); /* 初始状态：无阴影 */
+    font-family: 'Open Sans', cursive;
+    font-weight: 700; /* 加粗 */
+}
+
+
+.background-with-lightwave {
+    position: relative;
+    width: 100%; /* 根据需要调整 */
+    height: 100vh; /* 根据实际背景图片高度调整 */
+    background-size: cover;
+    overflow: hidden; /* 确保伪元素不超出容器 */
+}
+
+
+.background-with-lightwave::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%; /* 宽度应大于容器宽度，以确保覆盖整个区域 */
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.8), rgba(255,255,255,0));
+    /* 上面的渐变色可以根据需要调整透明度和颜色 */
+    transform: skewX(-20deg); /* 可选：倾斜效果，使光线看起来更有动感 */
+    z-index: 1; /* 确保光波在背景图之上 */
+    animation: slideAndFade 4s ease-in-out forwards; /* 动画名称、时长、缓动函数、保持最后一帧 */
+}
+
+@keyframes slideAndFade {
+    0% {
+        left: -100%;
+        opacity: 1; /* 开始时完全可见 */
+    }
+    75% {
+        left: 100%;
+        opacity: 1; /* 当光波移动到最右边时仍然可见 */
+    }
+    100% {
+        left: 100%;
+        opacity: 0; /* 动画结束时透明度为0，光波消失 */
+    }
+}
+@media (max-width: 1200px) {
+    .logo-container1 {
+        left: calc(100% - 65vw); /* 屏幕变小时，向左移动 */
+        width: 60vw; /* 屏幕变小时，缩小容器宽度 */
+    }
+}
+@media (max-width: 768px) {
+
+    .text-container1 {
+        width: 90%; /* 在移动端适当增加宽度 */
+        padding: 20px; /* 增加内边距以提高可读性 */
+    }
+
+    .company-title1 {
+        font-size: 1.5em; /* 在小屏幕上减小字体大小 */
+        margin-bottom: 15px; /* 调整标题和描述之间的间距 */
+    }
+}
+@media (max-width: 480px) {
+    .company-image1 {
+        height: 30vh;
+    }
+
+    .company-logo1 {
+        max-height: 80px;
+    }
+    .text-container1 {
+        width: 95%; /* 进一步增加宽度 */
+        padding: 15px; /* 减少内边距 */
+    }
+
+    .company-title1 {
+        font-size: 1.2em; /* 更进一步减小字体大小 */
+        margin-bottom: 10px; /* 调整标题和描述之间的间距 */
+    }
+}
+
+
+
+
+/* Logo 容器样式 */
+.logo1-container {
+    text-align: center; /* 居中 */
+    margin: 20px 0;     /* 上下间距 */
+}
+
+/* Logo 图片样式 */
+.logo1-container img {
+    width: 100px;       /* 调整 Logo 宽度 */
+    height: auto;       /* 高度自适应 */
+}
+
+/* 横线样式 */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;   /* 横线颜色 */
+    margin: 20px 0;     /* 上下间距 */
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+.copyright a {
+    color: #666;
+    text-decoration: none;
+}
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+/* 空白间距 */
+.spacer1 {
+    height: 30px; /* 空白高度 */
+}
