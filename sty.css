@@ -37,7 +37,7 @@ p {
 
 /* 当页面加载完成后的状态 */
 .navigation-buttons.show {
-    opacity: 1 !important; /* 页面加载完成后变为完全不透明 */
+    opacity: 1; /* 页面加载完成后变为完全不透明 */
 }
 
 /* 单个按钮样式 */
