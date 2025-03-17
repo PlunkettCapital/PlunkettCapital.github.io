@@ -387,7 +387,6 @@ p {
 @media (max-width: 480px) {
     .company-image {
         height: 30vh;
-        background-size: contain;
     }
 
     .company-logo {
@@ -408,7 +407,7 @@ p {
     }
     .logo-container {
         left: calc(100% - 75vw); /* 屏幕变小时，向左移动 */
-        width: 60vw; /* 屏幕变小时，缩小容器宽度 */
+        width: 70vw; /* 屏幕变小时，缩小容器宽度 */
     }
 }
 
