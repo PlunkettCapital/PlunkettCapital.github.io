@@ -405,6 +405,10 @@ p {
     .company-description {
         font-size: 0.9em; /* 更进一步减小字体大小 */
     }
+    .logo-container {
+        left: calc(100% - 75vw); /* 屏幕变小时，向左移动 */
+        width: 60vw; /* 屏幕变小时，缩小容器宽度 */
+    }
 }
 
 @media (max-width: 768px) {
