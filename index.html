@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plunkett Capital</title>
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="sty.css">
+
+    <!-- 引入GSAP库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <!-- 公司形象部分 -->
+    <section id="home" class="company-image">
+        <div class="background-with-lightwave">
+            <div class="logo-container">
+                <img src="img/源文件_画板 1.png" alt="Company Logo" class="company-logo">
+            </div>
+            <!-- 文本容器 -->
+            <div class="text-container">
+                <h2 class="company-title">Global Reach, Local Insight </h2>
+                <h2 class="company-title"></h2>
+            </div>
+
+
+            <!-- 汉堡菜单按钮 -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- 导航按钮 -->
+            <div class="navigation-buttons" id="navButtons">
+                <button data-target="home">HOME</button>
+                <button data-target="about">ABOUT</button>
+                <button data-target="team">TEAM</button>
+                <button data-target="business">BUSINESS</button>
+                <button data-target="contact">CONTACT</button>
+            </div>
+    </section>
+
+    <!-- 引用JavaScript文件 -->
+    <script src="cover.js"></script>
+
+
+    <!-- 关于我们部分 -->
+    <section id="about" class="content-section about-section">
+        <div class="section-content">
+            <h2>ABOUT</h2>
+            <p>At Plunkett Capital, we believe in marrying global reach with local insights. Founded in 2011 and
+                operating mainly through its majority-owned subsidiary, CPI Investment, Plunkett Capital combines strong
+                analytical insights with an intimate understanding of clients' needs to deliver best-in-class strategic
+                advice and investment solutions to corporate, institutional, and private wealth clients alike. Our goal
+                is to grow with our clients and empower them to better embrace an extremely promising, yet fast-evolving
+                future.</p>
+        </div>
+    </section>
+
+    <!-- 插图1部分 -->
+    <section class="content-section">
+        <div class="background1">
+        </div>
+    </section>
+
+    <!-- 团队部分 -->
+    <section id="team" class="content-section team-section">
+        <div class="section-content">
+            <h2>TEAM</h2>
+            <p>Plunkett Capital is led by a group of highly capable professionals in the international financial and
+                capital markets with significant experience gained from senior positions in some of the top firms in the
+                industry. </p>
+            <!-- 空白间距 -->
+            <div class="spacer1"></div>
+            <div class="team-images">
+                <img src="img/Morgan Stanley.png" alt="Team">
+                <img src="img/standard.png" alt="Team">
+                <img src="img/Goldman-Sachs-Logo.webp" alt="Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- 插图1部分 -->
+    <section class="content-section">
+        <div class="background3">
+        </div>
+    </section>
+
+
+    <!-- 业务部分 -->
+    <section id="business" class="business-section">
+        <h2>BUSINESS</h2>
+        <div class="business-content">
+            <!-- Asset Management -->
+            <div class="business-block asset-management">
+                <h3>Asset Management</h3>
+                <ul>
+                    <li>Fixed Income</li>
+                    <li>Global Macro</li>
+                    <li>Private Equity</li>
+                    <li>Private Investment in Public Equity (PIPE)</li>
+                    <li>Private Credit / Direct Lending</li>
+                </ul>
+            </div>
+
+            <!-- Financial Advisory -->
+            <div class="business-block financial-advisory">
+                <h3>Financial Advisory</h3>
+                <ul>
+                    <li>M&A Advisory</li>
+                    <li>Distressed Advisory</li>
+                    <li>Private Fundraising</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 添加按钮 -->
+    <div class="button-container">
+        <a href="portfolio-companies.html" class="select-portfolio-btn">Select Portfolio Companies</a>
+    </div>
+    </section>
+
+
+    <!-- 插图2部分 -->
+    <section class="content-section">
+        <div class="background2">
+        </div>
+    </section>
+
+    <!-- 联系我们部分 -->
+    <footer id="contact" class="contact-section">
+        <h2>CONTACT</h2>
+        <p style="line-height: 2;">
+            <strong>Hong Kong</strong><br>
+            Room 4410, 44/F, COSCO Tower, 183 Queen’s Road Central, Hong Kong<br>
+            <strong>Singapore</strong><br>
+            16 Raffles Quay, Floor #09-01 & #10-01, Hong Leong Building, Singapore 048581<br>
+            <a href="mailto:contact@plunkettcap.com">contact@plunkettcap.com</a>
+        </p>
+
+        <!-- 横线分隔 -->
+        <hr>
+        <!-- 版权声明 -->
+        <div class="copyright">
+            © 2025 Plunkett Capital Holdings Limited. All Rights Reserved.<br>
+            <strong>Terms of Use:</strong><br>
+            By accessing this website, you agree to be bound by these Terms of Use.
+            All content on this site is for informational purposes only and may not be reproduced without prior written
+            consent.<br>
+            <strong>Legal Disclaimer and Disclosures:</strong><br>
+            The information provided on this website is for general informational purposes only and does not
+            constitute financial, legal, or professional advice. Plunkett Capital Holdings Limited disclaims all
+            liability for any actions taken based on the content of this site.
+        </div>
+    </footer>
+
+</body>
+
+</html>
